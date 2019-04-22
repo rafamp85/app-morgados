@@ -1,0 +1,19 @@
+<div>
+  <ngx-datatable
+    class="material"
+    columnMode="force"
+    [headerHeight]="50"
+    [footerHeight]="0"
+    [rowHeight]="50"
+    [rows]="rows"
+    [scrollbarV]="true"
+    [scrollbarH]="true">
+
+    <ngx-datatable-column prop="name" name="Nombre"></ngx-datatable-column>
+    <ngx-datatable-column prop="street" name="Calle"></ngx-datatable-column>
+    <ngx-datatable-column prop="colony" name="Colonia"></ngx-datatable-column>
+    <ngx-datatable-column prop="reference" name="Referencia"></ngx-datatable-column>
+    <ngx-datatable-column prop="phone" name="Teléfono"></ngx-datatable-column>
+    <ngx-datatable-column prop="nextVisit" name="Próxima Visita"></ngx-datatable-column>
+  </ngx-datatable>
+</div>

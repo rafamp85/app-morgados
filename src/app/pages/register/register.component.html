@@ -1,0 +1,40 @@
+<!-- ============================================================== -->
+<!-- Start Page Content -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-12">
+        <div class="card card-body">
+            <h4 class="card-title">Datos Generales</h4>
+            <h5 class="card-subtitle"> Introduzca la información </h5>
+            <form #f="ngForm" ngNativeValidate (ngSubmit)="saveData(f)" class="form-horizontal m-t-30">
+                <div class="form-group">
+                    <label>Nombre:</label>
+                    <input [(ngModel)]="register.name" name="name" type="text" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label>Calle y Número:</label>
+                    <input [(ngModel)]="register.street" name="street" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Colonia:</label>
+                    <input [(ngModel)]="register.colony" name="colony" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Referencia:</label>
+                    <input [(ngModel)]="register.reference" name="reference" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Teléfono</label>
+                    <input [(ngModel)]="register.phone" name="phone" class="form-control" type="text">
+                </div>
+                <div class="form-group">
+                    <label>Próxima Visita:</label>
+                    <input [(ngModel)]="register.nextVisit" name="nextVisit" type="text" class="form-control">
+                </div>
+                <div>
+                    <button class="btn btn-primary"> Guardar </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
