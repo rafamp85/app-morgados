@@ -6,6 +6,8 @@ import { URL_SERVICES } from '../config/config';
 import { Register } from '../models/register.model';
 import { map } from 'rxjs/operators';
 
+declare var swal: any;
+
 @Injectable({
   providedIn: 'root'
 })
@@ -30,6 +32,7 @@ export class RegisterService {
     return this.http.post( url, register )
                 .pipe(
                   map( (resp: any) => {
+                    swal('¡Registro creado!', resp.register.name, 'success');
                     console.log('Guardado', resp);
                   })
                 );

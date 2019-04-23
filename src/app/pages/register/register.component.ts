@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Register } from '../../models/register.model';
 import { RegisterService } from '../../services/register.service';
+import { Router } from '@angular/router';
 
 
 
@@ -14,7 +15,10 @@ export class RegisterComponent implements OnInit {
 
   register: Register = new Register('', '', '', '', '', '', new Date());
 
-  constructor( public registerService: RegisterService ) { }
+  constructor( 
+    public registerService: RegisterService,
+    public router: Router
+  ) { }
 
   ngOnInit() {
   }
@@ -29,7 +33,7 @@ export class RegisterComponent implements OnInit {
 
     this.registerService.saveRegisters( this.register )
         .subscribe( register => {
-          console.log(register);
+          this.router.navigate(['/data']);
         });
 
   }
