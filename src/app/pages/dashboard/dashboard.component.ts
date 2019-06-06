@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { ChartDataSets, ChartOptions } from 'chart.js';
 import { Color, BaseChartDirective } from 'ng2-charts';
+import { RegisterService } from '../../services/register.service';
 
 
 @Component({
@@ -89,9 +90,12 @@ export class DashboardComponent implements OnInit {
 
   @ViewChild(BaseChartDirective) chart: BaseChartDirective;
 
-  constructor() { }
+  constructor( public registerService: RegisterService ) { }
 
   ngOnInit() {
+
+    // this.registerService.getPublicKey().then( console.log );
+
   }
 
 }

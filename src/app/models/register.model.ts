@@ -6,6 +6,6 @@ export class Register {
         public colony: string,
         public reference: string,
         public phone: string,
-        public nextVisit: Date
+        public nextVisit: string
     ) {  }
 }

@@ -27,10 +27,17 @@
                     <label>Teléfono</label>
                     <input [(ngModel)]="register.phone" name="phone" class="form-control" type="text">
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label>Próxima Visita:</label>
                     <input [(ngModel)]="register.nextVisit" name="nextVisit" type="text" class="form-control">
+                </div> -->
+
+                <div>
+                    <input matInput [matDatepicker]="picker" (dateChange)="onDateChanged($event.value)" placeholder="Choose a date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
                 </div>
+
                 <div>
                     <button class="btn btn-primary"> Guardar </button>
                 </div>

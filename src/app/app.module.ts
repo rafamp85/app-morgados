@@ -22,6 +22,12 @@ import { RegisterComponent } from './pages/register/register.component';
 import { PagesComponent } from './pages/pages.component';
 import { DataTableComponent } from './pages/data-table/data-table.component';
 
+// Material Design Components
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDatepickerModule } from '@angular/material';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
+
 // ngx Datatable
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
@@ -44,7 +50,11 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
     ReactiveFormsModule,
     APP_ROUTES,
     ChartsModule,
-    NgxDatatableModule
+    NgxDatatableModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
+    MatDatepickerModule,
+    MatMomentDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

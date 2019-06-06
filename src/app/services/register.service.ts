@@ -6,7 +6,9 @@ import { URL_SERVICES } from '../config/config';
 import { Register } from '../models/register.model';
 import { map } from 'rxjs/operators';
 
+
 declare var swal: any;
+
 
 @Injectable({
   providedIn: 'root'
